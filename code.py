@@ -642,11 +642,6 @@ class ReportGenerator:
 
 def main(data_file_path: Optional[str] = None, output_dir: str = "netflix_analysis_output") -> None:
     try:
-        print("=" * 60)
-        print("NETFLIX ANALYSIS TOOLKIT - INDUSTRY GRADE EDITION")
-        print("=" * 60)
-        print()
-
         if not data_file_path:
             data_file_path = "/Users/sauravanand/Netflix _Analysis.py/netflix_titles.csv"
 
@@ -656,82 +651,32 @@ def main(data_file_path: Optional[str] = None, output_dir: str = "netflix_analys
         output_path.mkdir(parents=True, exist_ok=True)
 
         logger.info("Starting Netflix content analysis")
-        print("🔄 Loading and validating data...")
 
         df = DataLoader.load_csv(data_path)
         quality_report = DataLoader.validate_data_quality(df)
 
-        print("✅ Data loaded successfully")
-        print(f"   Records: {quality_report['total_records']:,}")
-        print(f"   Columns: {quality_report['columns']}")
-        print()
-
-        print("🔄 Preprocessing data...")
-
         df_processed, processing_stats = DataPreprocessor.preprocess(df)
-
-        print("✅ Data preprocessing complete")
-        print(f"   Final records: {processing_stats['final_records']:,}")
-        print(f"   Records removed: {processing_stats['records_removed']:,}")
-        print()
-
-        print("🔄 Analyzing content...")
 
         analysis_results = NetflixAnalyzer.perform_complete_analysis(df_processed)
 
-        print("✅ Analysis complete")
-        print(f"   Content types analyzed: {analysis_results['content_types']['unique_types']}")
-        print(f"   Countries analyzed: {analysis_results['countries']['total_countries']}")
-        print(f"   Genres identified: {analysis_results['genres']['total_genres']}")
-        print()
-
-        print("🔄 Generating visualizations...")
-
         viz_gen = VisualizationGenerator(output_path)
         viz_gen.generate_all_visualizations(analysis_results)
-
-        print("✅ Visualizations generated")
-        print(f"   Saved to: {output_path}")
-        print()
-
-        print("🔄 Generating reports...")
 
         report_gen = ReportGenerator(output_path)
         report_gen.generate_pdf_report(analysis_results, quality_report)
         report_gen.generate_text_summary(analysis_results, quality_report, processing_stats)
 
-        print("✅ Reports generated")
-        print(f"   PDF Report: {output_path}/{CONFIG['output']['report_filename']}.pdf")
-        print(f"   Text Summary: {output_path}/{CONFIG['output']['summary_filename']}.txt")
-        print()
-
         cleaned_data_path = output_path / "netflix_titles_cleaned.csv"
         df_processed.to_csv(cleaned_data_path, index=False)
-        print(f"✅ Cleaned data saved: {cleaned_data_path}")
 
-        print("\n" + "=" * 60)
-        print("ANALYSIS COMPLETE - INDUSTRY GRADE!")
-        print("=" * 60)
-        print()
-        print("📊 Key Findings:")
-        content_types = analysis_results['content_types']['counts']
-        print(f"   • Total content: {analysis_results['summary']['total_titles']:,}")
-        print(f"   • Movies: {content_types.get('Movie', 0):,} ({analysis_results['content_types']['percentages'].get('Movie', 0):.1f}%)")
-        print(f"   • TV Shows: {content_types.get('TV Show', 0):,} ({analysis_results['content_types']['percentages'].get('TV Show', 0):.1f}%)")
-
-        top_country = list(analysis_results['countries']['top_countries'].keys())[0]
-        top_count = list(analysis_results['countries']['top_countries'].values())[0]
-        print(f"   • Largest producer: {top_country} ({top_count:,} titles)")
-
-        print(f"   • Date range: {analysis_results['summary']['date_range']['earliest']} to {analysis_results['summary']['date_range']['latest']}")
-        print()
+        print("Analysis complete")
 
     except NetflixAnalysisError as e:
-        print(f"❌ ANALYSIS ERROR: {e}")
         logger.error(f"Analysis failed: {e}")
+        raise
     except Exception as e:
-        print(f"❌ UNEXPECTED ERROR: {e}")
         logger.error(f"Unexpected error: {e}", exc_info=True)
+        raise
 
 if __name__ == "__main__":
     import sys

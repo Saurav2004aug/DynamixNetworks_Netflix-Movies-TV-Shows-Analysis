@@ -1,13 +1,9 @@
-# 🎬 Netflix Content Analysis Toolkit
+# 🎬 Netflix Movies and TV Shows Analysis
 
-**Industry-Grade Data Analysis Solution for Netflix Catalog Insights**
+A Python-based data analysis project for exploring Netflix content trends, genres, and regional distribution using statistical and visual analysis.
 
-![Analysis Status](https://img.shields.io/badge/Analysis-Complete-success)
-![Grade](https://img.shields.io/badge/Grade-Industry--Grade-blue)
 ![Python](https://img.shields.io/badge/Python-3.7+-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
-
-> Comprehensive data analysis of Netflix's catalog to uncover content trends, genres, ratings, and regional distributions through advanced statistical analysis and professional visualizations.
 
 ---
 
@@ -50,8 +46,8 @@ This repository contains a **production-ready Netflix content analysis toolkit**
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/netflix-analysis-toolkit.git
-cd netflix-analysis-toolkit
+git clone https://github.com/Saurav2004aug/DynamixNetworks_Netflix-Movies-TV-Shows-Analysis.git
+cd DynamixNetworks_Netflix-Movies-TV-Shows-Analysis
 
 # Install dependencies
 pip install pandas numpy matplotlib seaborn
@@ -61,13 +57,10 @@ pip install pandas numpy matplotlib seaborn
 
 ```bash
 # Run complete analysis
-python enhanced_netflix_analysis.py
+python code.py
 
 # Run with custom data file
-python enhanced_netflix_analysis.py /path/to/custom/netflix_data.csv
-
-# Run with specific output directory
-python enhanced_netflix_analysis.py data.csv --output custom_reports
+python code.py /path/to/custom/netflix_data.csv
 ```
 
 ---
@@ -76,8 +69,7 @@ python enhanced_netflix_analysis.py data.csv --output custom_reports
 
 ```
 Netflix _Analysis.py/
-├── 📄 enhanced_netflix_analysis.py    # Main analysis toolkit
-├── 📄 code.py                         # Original analysis code
+├── 📄 code.py                         # Main analysis script
 ├── 📄 README.md                       # This documentation
 ├── 📊 netflix_titles.csv              # Source dataset (8,807 records)
 ├── 🗂️ netflix_analysis_output/       # Generated outputs
@@ -119,7 +111,7 @@ Netflix _Analysis.py/
 ```python
 class DataLoader:        # Handles data ingestion & validation
 class DataPreprocessor:  # Professional ETL pipeline
-class NetflixAnalyzer:   # XG Statistical analysis
+class NetflixAnalyzer:   # Statistical analysis
 class VisualizationGenerator:  # High-quality charts
 class ReportGenerator:   # Automated reporting
 ```
@@ -138,7 +130,7 @@ class ReportGenerator:   # Automated reporting
 ### **Running Complete Analysis**
 
 ```python
-from enhanced_netflix_analysis import main
+from code import main
 
 # Run with default settings
 main()
@@ -337,8 +329,7 @@ in the Software without restriction...
 
 ## 📞 **Support & Contact**
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/netflix-analysis-toolkit/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/netflix-analysis-toolkit/discussions)
+- **Issues**: https://github.com/Saurav2004aug/DynamixNetworks_Netflix-Movies-TV-Shows-Analysis.git
 - **Email**: For direct inquiries about the analysis methodology
 
 ---
@@ -359,9 +350,3 @@ This repository demonstrates **industry-grade data analysis practices** applied 
 *"Transforming data into actionable insights through rigorous analytical methodology and professional software engineering practices."*
 
 ---
-
-**⭐ Star this repository if you found it useful!**
-
----
-
-*Generated with love for data science and Netflix entertainment.* 🎬🍿
