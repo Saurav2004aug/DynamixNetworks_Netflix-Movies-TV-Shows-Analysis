@@ -1,0 +1,29 @@
+2025-11-23 23:39:36,761 - __main__ - INFO - Starting Netflix content analysis
+2025-11-23 23:39:36,762 - __main__ - INFO - Loading data from /Users/sauravanand/Netflix _Analysis.py/netflix_titles.csv
+2025-11-23 23:39:36,800 - __main__ - INFO - Successfully loaded 8,807 records with 12 columns
+2025-11-23 23:39:36,800 - __main__ - INFO - Performing data quality validation
+2025-11-23 23:39:36,822 - __main__ - INFO - Starting data preprocessing pipeline
+2025-11-23 23:39:36,822 - __main__ - INFO - Filling missing values
+2025-11-23 23:39:36,824 - __main__ - INFO - Removing rows with missing critical data
+2025-11-23 23:39:36,827 - __main__ - WARNING - Removed 17 rows with missing critical data
+2025-11-23 23:39:36,827 - __main__ - INFO - Parsing date columns
+2025-11-23 23:39:36,834 - __main__ - INFO - Removing duplicate rows
+2025-11-23 23:39:36,845 - __main__ - INFO - Preprocessing complete: 8790 records retained
+2025-11-23 23:39:36,845 - __main__ - INFO - Starting complete analysis
+2025-11-23 23:39:36,845 - __main__ - INFO - Analyzing content type distribution
+2025-11-23 23:39:36,846 - __main__ - INFO - Analyzing top 10 producing countries
+2025-11-23 23:39:36,850 - __main__ - INFO - Analyzing content trends over time
+2025-11-23 23:39:36,858 - __main__ - INFO - Analyzing top 15 genres
+2025-11-23 23:39:36,864 - __main__ - INFO - Analyzing content rating distribution
+2025-11-23 23:39:36,866 - __main__ - INFO - Analysis complete
+2025-11-23 23:39:36,866 - __main__ - INFO - Generating all visualizations
+2025-11-23 23:39:36,866 - __main__ - INFO - Creating content type plot
+2025-11-23 23:39:37,230 - __main__ - INFO - Creating countries plot
+2025-11-23 23:39:37,413 - __main__ - INFO - Creating trends plot
+2025-11-23 23:39:37,614 - __main__ - INFO - Creating genres plot
+2025-11-23 23:39:37,864 - __main__ - INFO - Creating ratings plot
+2025-11-23 23:39:38,094 - __main__ - INFO - All visualizations saved to netflix_analysis_output
+2025-11-23 23:39:38,094 - __main__ - INFO - Generating PDF report
+2025-11-23 23:39:39,704 - __main__ - INFO - PDF report saved: netflix_analysis_output/netflix_analysis_report.pdf
+2025-11-23 23:39:39,706 - __main__ - INFO - Generating text summary
+2025-11-23 23:39:39,707 - __main__ - INFO - Text summary saved: netflix_analysis_output/netflix_analysis_summary.txt

@@ -1,0 +1,88 @@
+NETFLIX CONTENT ANALYSIS REPORT
+==================================================
+
+Report Generated: 2025-11-23 23:39:39
+
+DATA QUALITY ASSESSMENT
+-------------------------
+Total Records Loaded: 8,807
+Final Records After Cleaning: 8,790
+Records Removed: 17
+Duplicate Rows: 0
+Columns: 12
+
+CONTENT ANALYSIS RESULTS
+-------------------------
+
+1. CONTENT TYPE DISTRIBUTION
+--------------------------------
+Movie: 6,126 (69.7%)
+TV Show: 2,664 (30.3%)
+
+2. TOP CONTENT PRODUCING COUNTRIES
+-----------------------------------
+1. United States: 3,202
+2. India: 1,008
+3. United Kingdom: 627
+4. Canada: 271
+5. Japan: 257
+6. France: 212
+7. South Korea: 211
+8. Spain: 181
+9. Mexico: 134
+10. Australia: 115
+
+3. CONTENT ADDITION TRENDS
+----------------------------
+Annual growth rates:
+Movie: +176.6% annually
+TV Show: +inf% annually
+
+Recent year activity:
+Movie: 0 Movies + 0 TV Shows = 0 total
+TV Show: 0 Movies + 0 TV Shows = 0 total
+
+4. TOP CONTENT GENRES
+----------------------
+1. International Movies: 2,752
+2. Dramas: 2,426
+3. Comedies: 1,674
+4. International TV Shows: 1,349
+5. Documentaries: 869
+6. Action & Adventure: 859
+7. TV Dramas: 762
+8. Independent Movies: 756
+9. Children & Family Movies: 641
+10. Romantic Movies: 616
+
+Total unique genres: 42
+
+5. CONTENT RATING DISTRIBUTION
+--------------------------------
+By rating:
+TV-MA: 3,205 (36.5%)
+TV-14: 2,157 (24.5%)
+TV-PG: 861 (9.8%)
+R: 799 (9.1%)
+PG-13: 490 (5.6%)
+TV-Y7: 333 (3.8%)
+TV-Y: 306 (3.5%)
+PG: 287 (3.3%)
+TV-G: 220 (2.5%)
+NR: 79 (0.9%)
+
+By maturity group:
+Kids: 906
+Teens: 3,795
+Adults: 4,086
+Unrated: 3
+
+SUMMARY STATISTICS
+-------------------
+Total Content: 8,790
+Average Titles Per Year: 627.86
+Content Date Range: 2008-01-01 to 2021-09-25
+Release Year Range: 1925 - 2021
+
+Report generated automatically by Netflix Analysis Toolkit.
+For more details, refer to the accompanying PDF report.
